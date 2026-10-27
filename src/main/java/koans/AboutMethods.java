@@ -26,8 +26,18 @@ public class AboutMethods {
      * 
      */
     public static void computeAgeIn5And10And20YearsConsole() {
-
+        ageAndYearStuff(5);
+        ageAndYearStuff(10);
+        ageAndYearStuff(20);
     }
+        public static void ageAndYearStuff(int year){
+            System.out.println("what is your age");
+            String age= readLine();
+            int ageNumber= Integer.parseInt(age);
+            System.out.println("in "+ year+ " years from now, you will be" +(ageNumber + year)+".");
+
+        }
+    
 
     /**
      * # Repetitive tasks: methods to the rescue
@@ -96,7 +106,7 @@ public class AboutMethods {
      * For this exercise, you need to create a method that is asking and computing the age in a certain number of years.
      * This certain number of years would be the method's parameter.
      * In the existing method 'computeAgeIn5And10And20YearsConsoleWithMethod()', you will then only have to call this method 3 times:
-     *   - once with a value of 5
+     *      *   - once with a value of 5
      *   - once with a value of 10
      *   - and finally once with a value of 20
      * 
@@ -176,7 +186,7 @@ public class AboutMethods {
      * 
      */
     public static int square(int number) {
-        return 0;
+        return number*number;
     }    
 
     
@@ -197,7 +207,9 @@ public class AboutMethods {
      * opposite(-5) should return 5
      * 
      */
-
+    public static int opposite(int number){
+        return number;
+    }
 
     /**
      * # Helping a farmer
@@ -212,4 +224,8 @@ public class AboutMethods {
      * legs(2, 3, 4) should return 32
      * 
      */
+    public static int legs(int chickenCount, int pigCount,int cowCount){
+        int answer=chickenCount*2+pigCount*4+cowCount*4;
+        return answer;
+    }
 }
