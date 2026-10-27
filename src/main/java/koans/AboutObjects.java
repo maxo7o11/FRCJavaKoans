@@ -1,6 +1,7 @@
 package koans;
 
 public class AboutObjects {
+    
     /**
      * # The first object
      * 

@@ -1,6 +1,24 @@
 package koans;
-
+import utils.MathUtils;
+import utils.math.OtherMathUtils;
 public class AboutClasses {
+
+    public static void displayCube(int number) {
+        System.out.println(MathUtils.cube(number));
+
+        
+    }
+    
+    public static void displayMax(int a, int b) {
+        System.out.println(OtherMathUtils.max(a, b));
+        
+    }
+
+    public static void displayMin(int a,int b) {
+        System.out.println(Math.min(a,b));
+
+        
+    }
     /**
      * # Classes and packages
      * 
@@ -45,6 +63,18 @@ public class AboutClasses {
      * utils.MathUtils.cube(2) should return 8
      * 
      */
+
+
+
+
+
+
+
+
+
+    
+
+
 
 
     /**

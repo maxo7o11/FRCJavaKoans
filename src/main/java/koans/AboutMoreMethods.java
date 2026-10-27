@@ -1,6 +1,49 @@
 package koans;
 
 public class AboutMoreMethods {
+    public static int abs(int number){
+        if(number<0){
+            return -number;
+        
+        }else {
+             return number;
+        }
+    }
+    public static int min(int number, int number2){
+        if(number<number2){
+            return number;
+        } else {
+            return number2;
+        }
+    }
+    public static int remainder(int number, int number2){
+        return number%number2;
+    }
+    public static boolean isEven(int number, int number2){
+        if (number%2 == 0){
+            return true; 
+        } else {
+            return false;
+        }
+    }
+    public static boolean isMultiple(int number,int number2){
+        if (number%number2==0){
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public static void fizzBuzz(int number){
+        if(isMultiple(number,5)&&isMultiple(number,3)){
+            System.out.println("Fizzbuzz");
+        } else if(isMultiple(number,3)) {
+            System.out.println("Fizz");
+        } else if(isMultiple(number,5)) {
+            System.out.println("Buzz");
+        } else{
+            System.out.println(Integer.toString(number));
+        }
+    }
     /**
      * # Computing the absolute value of a number
      * 

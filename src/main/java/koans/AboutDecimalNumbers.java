@@ -1,6 +1,7 @@
 package koans;
 
 public class AboutDecimalNumbers {
+
     /**
      * # Converting a measure of length
      * 
@@ -23,7 +24,10 @@ public class AboutDecimalNumbers {
      * toCm(2.0) should return 5.08
      * 
      */
-
+    
+    public static double toCm(double inches){
+        return inches * 2.54;
+    }
 
     /**
      * # Converting the other way
@@ -38,6 +42,9 @@ public class AboutDecimalNumbers {
      * 
      */
 
+    public static double toInches(double cm){
+        return cm / 2.54;
+    }
 
     /**
      * # Computing some geometry
@@ -52,6 +59,9 @@ public class AboutDecimalNumbers {
      * 
      */
 
+    public static double rectangleArea(double length, double area) {
+        return length * area;
+    }
 
      /**
      * # Computing how long a robot is traveling step 1
@@ -70,6 +80,9 @@ public class AboutDecimalNumbers {
      * 
      */
 
+     public static double wheelCircumference(double radius){
+        return 2 * radius * 3.14;
+     }
 
     /**
      * # Computing how long a robot is traveling step 2
@@ -89,6 +102,9 @@ public class AboutDecimalNumbers {
      * 
      */
 
+    public static double wheelRotations(double rotations,double gearRatio){
+        return rotations * gearRatio;
+    }
 
     /**
      * # Computing how long a robot is traveling final step
@@ -109,5 +125,10 @@ public class AboutDecimalNumbers {
      * 
      */
 
+    public static double toDistance(double motorRotations,double gearRatio,double radius){
+        double wheelRotations = wheelRotations(motorRotations, gearRatio);
+        double circumference = wheelCircumference(radius);
+        return wheelRotations * circumference;
+    }
      
 }

@@ -32,7 +32,12 @@ public class AboutLoops {
      * Hello
      * 
      */
-
+    public static void helloNTimes(int times){
+            while(times > 0 ) {
+                System.out.println("hello");
+                times--;
+            }
+    }
 
      /**
      * # Printing where we are in a loop
@@ -51,6 +56,13 @@ public class AboutLoops {
      * 
      */
 
+     public static void displayNumbers(int n){
+        int i = 1;
+        while(i <= n){
+            System.out.println(i);
+            i++;
+        }
+     }
 
      /**
      * # Counting in reverse
@@ -69,6 +81,12 @@ public class AboutLoops {
      * 
      */
 
+     public static void displayReverseNumbers(int n){
+        while(n >= 1){
+        System.out.println(n);
+        n--;
+    }
+    }
 
      /**
      * # Multiples of 7
@@ -88,6 +106,15 @@ public class AboutLoops {
      * 
      */
 
+    public static void sevens(int n){
+        int i = 1;
+        while(i<=n){
+            if(i % 7 == 0){
+                System.out.println(i);
+            }
+            i++;
+        }
+    }
 
      /**
      * # Multiples of 7 or 8
@@ -115,6 +142,15 @@ public class AboutLoops {
      * 
      */
 
+     public static void sevensOrEights(int n) {
+        int i = 1;
+        while(i<=n) {
+            if (AboutMoreMethods.isMultiple(1, 7)||AboutMoreMethods.isMultiple(i, 8)){
+                System.out.println(i);
+            }
+            i++;
+        }
+     }
 
      /**
      * # Exponents
@@ -136,6 +172,14 @@ public class AboutLoops {
      * 
      */
 
+     public static int exponent(int x, int n) {
+        int result = 1;
+        while(n>0){
+            result *= x;
+            n--;
+        }
+        return result;
+     }
 
      /**
      * # Exponents, including 0
@@ -155,7 +199,17 @@ public class AboutLoops {
      * exponent2(5, 3) should return 125
      * 
      */
-
+public static int exponent2(int x,int n) {
+    if(n == 0) {
+        return 1;
+    }
+    int result = 1;
+    while(n>0){
+        result *= x;
+        n--;
+    }
+    return result;
+}
 
      /**
      * # Factorial
@@ -177,5 +231,13 @@ public class AboutLoops {
      * 
      */
 
+     public static int factorial(int n) {
+        int result = 1;
+        while(n > 0){
+            result*=n;
+            n--;
+        }
+        return result;
+     }
 
 }
